@@ -20,6 +20,8 @@ New developers will often be asked to get up to speed on a project rapidly. It i
 1. Commit & Push your README.md notes back to your origin and issue a Pull request to my instructor repo.
 1. Submit your Pull request URL to **Developer Skills Lab**
 
+Hello hello Test!
+
 ## Part 2: Demo & Bug Bounty **(Not time Sensitive for extra credit)**
 
 1. After my in class demonstration, see if you can use the JavaFX knowledge you obtained this week to get the project functioning.
