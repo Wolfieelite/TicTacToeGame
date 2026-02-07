@@ -2,7 +2,6 @@
 JavaFX TicTacToeGame for CIS-18 bug training!
 
 ## Part 1: Developer Skills
-
 New developers will often be asked to get up to speed on a project rapidly. It is essential that new developers be able to look through code, identify pieces the under-stand, and research pieces they do not. This is an exercise that takes 2 forms, first an introduction to code scanning and review and second as a tool to help you identify areas you need to improve your knowledge of.
 
 1. Fork this repo to your own GitHub Account.
@@ -11,16 +10,44 @@ New developers will often be asked to get up to speed on a project rapidly. It i
     * Jot down, in this README.md file, notes concerning: classes, objects, encapsulation, abstraction, inheritance, and polymorphism (i.e. if they are used, where they occur, etc.).
 1. Don’t be stuck for too long, if you don't understand a section of code or syntax jot it down in the README.md and move on.
     * Jot down part of the code you don't understand here.
-    * I'd like each person to jot down at least 2 things unfamiliar to them.
+```java 
+//Computer.java
+
+if(game.checkWinner(sq.getRow(), sq.getCol(), game.getPlayers().get(playerIdx).getMarker())) {
+    System.out.printf("%s  This would be a winner for %s%n", sp, game.getPlayers().get(playerIdx).getName());
+    // TODO: handle case of Tie (i.e. score 0).
+    // If its a winner, who is the winner?
+    return (this.getTurn() == playerIdx) ? 1 : -1;
+}
+```
+```java
+
+//TicTacToe.java
+for(int i=0; i<this.squares; i++) {
+    if(((Button)this.gridPaneArray[r][i]).getText().equals(marker)) row++;
+    if(((Button)this.gridPaneArray[i][c]).getText().equals(marker)) col++;
+    if(((Button)this.gridPaneArray[i][i]).getText().equals(marker)) diag++;
+    if(((Button)this.gridPaneArray[i][this.squares - (i + 1)]).getText().equals(marker)) rdiag++;
+}
+
+```
+
+ I'd like each person to jot down at least 2 things unfamiliar to them.
 1. Now Take 5 minutes  and team up with one of your group members and take turns trying to explain what you’ve understood to someone else.
     * Ask if they can answer the items you jotted down in #2.
     * Take notes here of things that became more clear after team/peer discussion.
 1. Let's discuss as a class the items you still have questions about or are unfamiliar with.
     * Take notes here of things that became more clear after class discussion.
+```java
+//BoardButton.java
+public BoardButton(int col, int row, String text) {
+    super(text);
+    this.coordinate = new int[]{col, row};
+}
+```
 1. Commit & Push your README.md notes back to your origin and issue a Pull request to my instructor repo.
 1. Submit your Pull request URL to **Developer Skills Lab**
 
-Hello hello Test!
 
 ## Part 2: Demo & Bug Bounty **(Not time Sensitive for extra credit)**
 
